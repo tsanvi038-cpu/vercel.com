@@ -6,9 +6,388 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa similique repudiandae consequuntur incidunt magni quaerat, delectus asperiores assumenda nemo qui. Hic eaque ratione autem natus architecto laborum placeat sunt. Facere repellendus neque facilis fuga, ea reiciendis modi reprehenderit quia nisi animi similique laudantium ab sequi quidem optio, ut eius. Totam.</p>
-    <h1>this is sanvi thakur</h1>
-    <a href="https://github.com/tsanvi038-cpu/vercel.com.git"> My Git Hub account</a>
-    <a href="https://github.com/tsanvi038-cpu/vercel.com.git">this is also mmy git hub account</a>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f0;
+            color: #19134f;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-center {
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #555;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        /* LEFT SIDE */
+        .left {
+            width: 28%;
+        }
+
+        .left h1 {
+            font-size: 52px;
+            line-height: 0.95;
+            margin-bottom: 25px;
+        }
+
+        .left p {
+            color: #666;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .explore {
+            border: none;
+            background: linear-gradient(90deg, #ff2470, #ff624c);
+            color: white;
+            padding: 12px 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 50, 100, 0.3);
+        }
+
+        /* CARDS */
+        .cards {
+            width: 72%;
+            display: flex;
+            gap: 12px;
+        }
+
+        .card {
+            height: 310px;
+            flex: 1;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                transparent 45%,
+                rgba(0,0,0,0.75)
+            );
+        }
+
+        .card1 {
+            background-image: url("https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=600&q=80");
+        }
+
+        .card2 {
+            background-image: url("https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=600&q=80");
+        }
+
+        .card3 {
+            background-image: url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80");
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .card-content h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .location {
+            font-size: 10px;
+            color: #ddd;
+        }
+
+        /* BOTTOM */
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .social {
+            display: flex;
+            gap: 20px;
+            color: #555;
+            font-size: 12px;
+        }
+
+        .destination {
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: #777;
+        }
+
+        .number {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #777;
+        }
+
+        .arrows {
+            display: flex;
+            gap: 10px;
+        }
+
+        .arrow {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+
+            .nav-center {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px 0;
+            }
+
+            .left {
+                width: 100%;
+            }
+
+            .cards {
+                width: 100%;
+            }
+
+            .card {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .left h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .bottom {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav>
+
+            <div class="logo">
+                travel.
+            </div>
+
+            <div class="nav-center">
+                CARD SLIDER FOR WORDPRESS
+            </div>
+
+            <div class="nav-links">
+                <a href="#">ABOUT</a>
+                <a href="#">CONTACT</a>
+            </div>
+
+        </nav>
+
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <!-- LEFT CONTENT -->
+            <div class="left">
+
+                <h1>
+                    Must see<br>
+                    Places
+                </h1>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin elementum metus eu enim rhoncus posuere.
+                </p>
+
+                <button class="explore">
+                    Explore
+                </button>
+
+            </div>
+
+
+            <!-- CARDS -->
+            <div class="cards">
+
+                <div class="card card1">
+
+                    <div class="card-content">
+
+                        <h2>Cappadocia</h2>
+
+                        <div class="location">
+                            📍 TURKEY
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card card2">
+
+                    <div class="card-content">
+
+                        <h2>Santorini</h2>
+
+                        <div class="location">
+                            📍 GREECE
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card card3">
+
+                    <div class="card-content">
+
+                        <h2>Bali</h2>
+
+                        <div class="location">
+                            📍 INDONESIA
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM SECTION -->
+        <div class="bottom">
+
+            <div class="social">
+                <span>f</span>
+                <span>▶</span>
+                <span>◎</span>
+            </div>
+
+            <div class="destination">
+                UNIQUE DESTINATIONS
+            </div>
+
+            <div class="number">
+                01 / 03
+            </div>
+
+            <div class="arrows">
+
+                <div class="arrow">
+                    ←
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
 </body>
 </html>
